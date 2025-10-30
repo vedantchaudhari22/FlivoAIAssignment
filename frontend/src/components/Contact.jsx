@@ -36,7 +36,10 @@ const Contact = () => {
 
         // backend api integration
         try {
-            const res = await axios.post('http://localhost:5000/api/contact', formData);
+            //i have deployed the project on render.com thats why using the deployed link of render
+            // but for running the project on local machine then use this url "http://localhost:5000/api/contact" 
+            // instead of render url
+            const res = await axios.post('https://backend-o6hw.onrender.com', formData);
 
             if (res.data.success) {
                 setStatus({ type: 'success', message: res.data.message || 'Message sent successfully!' });
